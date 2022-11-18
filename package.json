@@ -1,7 +1,8 @@
 {
-  "name": "timespin",
+  "name": "timewheel",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rubylnic.github.io/timewheel",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -12,6 +13,7 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "axios": "^1.1.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -26,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -49,8 +49,9 @@ export default function TimeWheel() {
     let indexRender = activeTime < 10 ? "0" + (activeTime + 1) : activeTime + 1;
     let lengthRender = data.length < 10 ? "0" + data.length : data.length;
 
+    // Эмуляция работы с сервером
     useEffect(() => {
-        axios.get('../data.json').then((res) => {
+        axios.get('data.json').then((res) => {
             setData(res.data)
             console.log(res.data)
         }).catch((err) => {
@@ -164,16 +165,18 @@ export default function TimeWheel() {
                                 <div className='timewheel__swiper-buttons'>
                                     <SwiperButtonPrev>
 
-                                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="#42567A" stroke-width="2" />
+                                        <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="#42567A" strokeWidth="2" />
                                         </svg>
 
-                                    </SwiperButtonPrev>z
+
+                                    </SwiperButtonPrev>
                                     <SwiperButtonNext>
 
-                                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="#42567A" stroke-width="2" />
+                                        <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="#42567A" strokeWidth="2" />
                                         </svg>
+
 
                                     </SwiperButtonNext>
                                 </div>
