@@ -46,7 +46,7 @@ export default function TimeWheel() {
     const activeTime = useAppSelector(selectActiveTime);
     const transformStyle = rotate > 4 && rotate < 1 ? `rotate(${60 * rotate}deg)` : `rotate(-${60 * rotate}deg)`;
     // const transitionDuration = `${0.5 * rotate}s`
-    let indexRender = activeTime < 10 ? "0" + (activeTime + 1) : activeTime + 1;
+    let indexRender = activeTime < 10 ? "0" + activeTime : activeTime;
     let lengthRender = data.length < 10 ? "0" + data.length : data.length;
 
     // Эмуляция работы с сервером

@@ -100,6 +100,12 @@
     .swiper-wrapper {
         display: none;
     }
+
+    .swiper-pagination {
+        width: fit-content !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
 }
 
 
