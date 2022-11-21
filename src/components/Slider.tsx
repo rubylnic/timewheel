@@ -5,7 +5,6 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import '../scss/swiper-custom.scss';
 import { ReactNode } from 'react';
-import type { Event } from './TimeWheel';
 
 export default function Slider({ children }: { children: ReactNode[] }) {
     const mediaQuery = window.matchMedia('(min-width: 768px)')
@@ -37,6 +36,7 @@ export default function Slider({ children }: { children: ReactNode[] }) {
                 modules={[Navigation, Pagination]}
                 spaceBetween={spaceBetween}
                 slidesPerView={slidesPerView}
+            // navigation
             >
                 <SwiperButtonPrev>
                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,6 +51,7 @@ export default function Slider({ children }: { children: ReactNode[] }) {
                         <path d="M1 1L6 6L1 11" stroke="#3877EE" strokeWidth="2" />
                     </svg>
                 </SwiperButtonNext>
+
             </Swiper>
 
         </>

@@ -1,9 +1,9 @@
 
 import { useAppDispatch, useAppSelector } from '../store/hooks'
-import { selectActiveTime, selectRotate, setActiveTime, setRotate } from '../store/timeSlice'
+import { selectActiveTime, selectRotate, setActiveTime, setFromYear, setRotate, setToYear } from '../store/timeSlice'
 import type { TimePointType } from './TimeWheel';
 
-export default function TimePoint({ index, feature, swiperInstance }: TimePointType) {
+export default function TimePoint({ index, feature, item }: TimePointType) {
 
     const dispatch = useAppDispatch();
     const activeTime = useAppSelector(selectActiveTime);
@@ -22,8 +22,9 @@ export default function TimePoint({ index, feature, swiperInstance }: TimePointT
     function onPointClick() {
         let diff = index - activeTime;
         dispatch(setRotate(diff))
-        swiperInstance?.slideTo(index - 1)
         dispatch(setActiveTime(index));
+        dispatch(setFromYear(item.timeFrom))
+        dispatch(setToYear(item.timeTo))
     }
 
     return (
